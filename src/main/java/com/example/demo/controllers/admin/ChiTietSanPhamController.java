@@ -16,26 +16,26 @@ public class ChiTietSanPhamController {
     private ArrayList<ChiTietSanPhamRequest> ds;
 
     @GetMapping("create")
-    public String createCuaHang(@ModelAttribute("ctsp") CuaHangRequest req){
-        return "chi_tiet_san_pham/createe";
+    public String createCuaHang(@ModelAttribute("ctsp") ChiTietSanPhamRequest req){
+        return "chi_tiet_san_pham/create";
     }
 
 
     @PostMapping("store")
-    public String store(@Valid @ModelAttribute("ctsp") CuaHangRequest req, BindingResult result) {
-        System.out.println(req.getTen());
-        return "chi_tiet_san_pham/createe";
+    public String store(@Valid @ModelAttribute("ctsp") ChiTietSanPhamRequest req, BindingResult result) {
+
+        return "chi_tiet_san_pham/create";
 
     }
 
 
     public ChiTietSanPhamController(){
         this.ds = new ArrayList<>();
-        ds.add(new ChiTietSanPhamRequest("CTSP1","Quan vải","Quần","Đỏ","Nike",1,"sdf",1,12343.7,11111.0));
-        ds.add(new ChiTietSanPhamRequest("CTSP2","Áo","Áo","Trắn","Nike",1,"sdf",1,12343.7,11111.0));
-        ds.add(new ChiTietSanPhamRequest("CTSP3","Quần jean ","Quần","Xanh","Adidas",4,"sdf",1,12343.7,11111.0));
-        ds.add(new ChiTietSanPhamRequest("CTSP4","Giày thể thao","Giày","Trắng","Nike",3,"sdf",1,12343.7,11111.0));
-        ds.add(new ChiTietSanPhamRequest("CTSP5","Giày  chạy","Giày","Đen","Adidas",2,"sdf",1,12343.7,11111.0));
+        ds.add(new ChiTietSanPhamRequest("CTSP1","Quan vải","Quần","Đỏ","Nike",1,"sdf",1,"12343.7","19111.0"));
+        ds.add(new ChiTietSanPhamRequest("CTSP2","Áo","Áo","Trắn","Nike",1,"sdf",1,"12343.7","12343.7"));
+        ds.add(new ChiTietSanPhamRequest("CTSP3","Quần jean ","Quần","Xanh","Adidas",4,"sdf",1,"12343.7","13343.7"));
+        ds.add(new ChiTietSanPhamRequest("CTSP4","Giày thể thao","Giày","Trắng","Nike",3,"sdf",1,"12343.7","15343.7"));
+        ds.add(new ChiTietSanPhamRequest("CTSP5","Giày  chạy","Giày","Đen","Adidas",2,"sdf",1,"12343.7","14643.7"));
 
 
     }

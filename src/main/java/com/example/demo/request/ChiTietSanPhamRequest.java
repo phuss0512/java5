@@ -35,10 +35,10 @@ public class ChiTietSanPhamRequest {
     private Integer soLuongTon;
 
     @NotBlank
-    private Double giaNhap;
+    private String giaNhap;
 
     @NotBlank
-    private Double giaBan;
+    private String giaBan;
 
 
 
